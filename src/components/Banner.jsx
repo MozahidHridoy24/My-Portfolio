@@ -3,7 +3,7 @@ import myImage from "../assets/mozahid.jpg";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-12 py-10 bg-base-200">
+    <section className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-12 py-10 bg-[#0f172a]">
       {/* Left content */}
       <div className="flex-1 text-center lg:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">

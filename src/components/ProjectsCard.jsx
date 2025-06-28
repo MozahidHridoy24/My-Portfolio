@@ -1,6 +1,11 @@
 import { motion } from "motion/react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { Link } from "react-router";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 
 const ProjectCard = ({ project, reverse }) => {
   return (
@@ -15,11 +20,25 @@ const ProjectCard = ({ project, reverse }) => {
     >
       {/* Image Column */}
       <div className="lg:w-1/2 w-full">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-64 lg:h-full object-cover rounded-lg border border-cyan-800"
-        />
+        <Swiper
+          modules={[Autoplay, Pagination, EffectFade]}
+          spaceBetween={30}
+          effect="fade"
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          loop={true}
+          className="rounded-lg border border-cyan-800 h-64 lg:h-full"
+        >
+          {project?.image?.map((img, idx) => (
+            <SwiperSlide key={idx}>
+              <img
+                src={img}
+                alt={`${project.title} Screenshot ${idx + 1}`}
+                className="w-full h-64 lg:h-full object-cover rounded-lg"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       {/* Text Content Column */}
@@ -87,7 +106,7 @@ const ProjectCard = ({ project, reverse }) => {
           </a>
 
           <Link
-            to={`/projects/${project.id}`}
+            to={`/projects-details/${project.id}`}
             className="ml-auto text-cyan-400 hover:underline text-sm"
           >
             See Details →

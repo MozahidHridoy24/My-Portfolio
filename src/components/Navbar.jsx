@@ -45,7 +45,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 px-6 sticky top-0 left-0 right-0 z-50 shadow-md border-b">
+    <div className="navbar bg-[#0f172a] px-6 sticky top-0 left-0 right-0 z-50 shadow-md border-b">
       {/* Brand/Logo */}
       <div className="flex-1">
         <NavLink

@@ -4,6 +4,7 @@ import MainLayout from "../Layouts/MainLayout";
 import Projects from "../Pages/Projects";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
+import ProjectDetails from "../Pages/ProjectDetails";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
       {
         path: "/projects",
         element: <Projects></Projects>,
+      },
+      {
+        path: "/projects-details/:id",
+        element: <ProjectDetails></ProjectDetails>,
+        loader: () => fetch("/projectData.json"),
       },
       {
         path: "/about",

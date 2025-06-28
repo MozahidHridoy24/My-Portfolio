@@ -46,7 +46,7 @@ const skills = {
 
 const SkillItem = ({ icon, name, color, delay }) => (
   <motion.div
-    className="flex flex-col items-center gap-2 p-4 bg-base-200 rounded-lg shadow hover:shadow-md hover:scale-105 transition"
+    className="flex flex-col items-center gap-2 p-4 bg-base-100 rounded-lg shadow hover:shadow-md hover:scale-105 transition"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.4, delay }}
@@ -62,7 +62,7 @@ const SkillItem = ({ icon, name, color, delay }) => (
 
 const Skills = () => {
   return (
-    <section className="py-20 px-6 md:px-16 bg-base-100">
+    <section className="py-20 px-6 md:px-16 ">
       <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
         My Skills
       </h2>
@@ -72,7 +72,7 @@ const Skills = () => {
         {Object.entries(skills).map(([category, skillList], index) => (
           <motion.div
             key={category}
-            className="bg-base-200 p-6 rounded-xl shadow-xl hover:shadow-2xl border border-base-300"
+            className="bg-[#0f172a] p-6 rounded-xl shadow-xl hover:shadow-2xl border border-base-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 * index }}

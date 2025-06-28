@@ -24,7 +24,7 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section className="py-20 px-6 md:px-16 bg-base-100 text-slate-800 dark:text-slate-100">
+    <section className="py-20 px-6 md:px-16  text-slate-800 dark:text-slate-100">
       <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
         Contact Me
       </h2>
@@ -39,7 +39,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 * idx }}
-            className="flex flex-col items-center gap-4 p-6 bg-base-200 rounded-xl shadow hover:shadow-xl transition hover:scale-105 text-center"
+            className="flex flex-col items-center gap-4 p-6 bg-[#0f172a] rounded-xl shadow hover:shadow-xl transition hover:scale-105 text-center"
           >
             <div className="text-4xl text-[#219EBC]">{item.icon}</div>
             <div>
