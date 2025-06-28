@@ -93,7 +93,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-            className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-black text-white rounded-box w-52 text-right origin-top-right"
+            className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-[#0f172a] text-white rounded-box w-52 text-right origin-top-right"
           >
             {navItems}
           </motion.ul>

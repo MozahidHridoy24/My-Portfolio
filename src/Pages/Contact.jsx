@@ -24,8 +24,9 @@ const contactInfo = [
 
 const Contact = () => {
   return (
-    <section className="py-20 px-6 md:px-16  text-slate-800 dark:text-slate-100">
-      <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
+    <section className="py-12 px-6 md:px-16 text-slate-100">
+      <div className="w-11/12 mx-auto">
+        <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
         Contact Me
       </h2>
 
@@ -37,7 +38,7 @@ const Contact = () => {
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 * idx }}
             className="flex flex-col items-center gap-4 p-6 bg-[#0f172a] rounded-xl shadow hover:shadow-xl transition hover:scale-105 text-center"
           >
@@ -48,6 +49,7 @@ const Contact = () => {
             </div>
           </motion.a>
         ))}
+      </div>
       </div>
     </section>
   );

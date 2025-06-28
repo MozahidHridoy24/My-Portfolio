@@ -54,39 +54,39 @@ const SkillItem = ({ icon, name, color, delay }) => (
     <div className="text-3xl" style={{ color }}>
       {icon}
     </div>
-    <p className="text-sm font-medium text-center text-slate-700 dark:text-slate-200">
-      {name}
-    </p>
+    <p className="text-sm font-medium text-center text-slate-200">{name}</p>
   </motion.div>
 );
 
 const Skills = () => {
   return (
-    <section className="py-20 px-6 md:px-16 ">
-      <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
-        My Skills
-      </h2>
+    <section className="py-12 px-6 md:px-16">
+      <div className="w-11/12 mx-auto">
+        <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
+          My Skills
+        </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
-        {/* Each category box */}
-        {Object.entries(skills).map(([category, skillList], index) => (
-          <motion.div
-            key={category}
-            className="bg-[#0f172a] p-6 rounded-xl shadow-xl hover:shadow-2xl border border-base-300"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 * index }}
-          >
-            <h3 className="text-2xl font-semibold text-center mb-6 text-slate-800 dark:text-slate-100">
-              {category}
-            </h3>
-            <div className="grid grid-cols-2 gap-4">
-              {skillList.map((skill, idx) => (
-                <SkillItem key={skill.name} {...skill} delay={0.05 * idx} />
-              ))}
-            </div>
-          </motion.div>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          {/* Each category box */}
+          {Object.entries(skills).map(([category, skillList], index) => (
+            <motion.div
+              key={category}
+              className="bg-[#0f172a] p-6 rounded-xl shadow-xl hover:shadow-2xl border border-base-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+            >
+              <h3 className="text-2xl font-semibold text-center mb-6 text-slate-100">
+                {category}
+              </h3>
+              <div className="grid grid-cols-2 gap-4">
+                {skillList.map((skill, idx) => (
+                  <SkillItem key={skill.name} {...skill} delay={0.05 * idx} />
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

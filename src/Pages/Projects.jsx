@@ -11,7 +11,7 @@ const Projects = () => {
         setProjects(data);
       });
   }, []);
-  console.log(projects);
+
   return (
     <section className="px-6 lg:px-20 py-12 bg-base-200 ">
       <div className="w-11/12 mx-auto">

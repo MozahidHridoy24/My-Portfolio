@@ -3,19 +3,19 @@ import myImage from "../assets/mozahid.jpg";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-12 py-10 bg-[#0f172a]">
+    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 py-10 bg-[#0f172a]">
       {/* Left content */}
-      <div className="flex-1 text-center lg:text-left">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <div className="flex-1 text-center md:text-left">
+        <h1 className="text-4xl font-bold mb-4">
           Hi, I'm <span className="text-[#219EBC]">Mozahidul Islam Hridoy</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-slate-300 mb-6">
           MERN Stack Web Developer
         </h2>
         <p className="text-base md:text-lg mb-6 max-w-xl text-slate-300">
-          Passionate about building user-centric, performant web applications
-          using modern technologies like React, Node.js,Express.js, MongoDB, and
-          Tailwind CSS.
+          Passionate about delivering clean, efficient, and impactful web
+          applications using modern technologies like React, Node.js,
+          Express.js, MongoDB and Tailwind CSS.
         </p>
 
         {/* Resume Button */}
@@ -23,14 +23,14 @@ const Banner = () => {
           <a
             href="/src/assets/MD.-MOZAHIDUL-ISLAM-Resume.pdf" // replace with your resume URL or file
             download
-            className="btn btn-primary"
+            className="btn btn-primary bg-[#219EBC]"
           >
             Resume
           </a>
         </div>
 
         {/* Social Links */}
-        <div className="flex gap-4 justify-center lg:justify-start text-2xl">
+        <div className="flex gap-4 justify-center md:justify-start text-2xl">
           <a
             href="https://github.com/MozahidHridoy24"
             target="_blank"

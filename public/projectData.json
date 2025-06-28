@@ -1,5 +1,50 @@
 [
   {
+    "id": "rate-deck",
+    "title": "RateDeck",
+    "shortDescription": "RateDeck is a modern service review platform that helps users discover, rate, and review services with ease.",
+    "liveLink": "https://rate-deck.web.app/",
+    "features": [
+      "Discover Services – Browse a wide range of services rated by real users.",
+      "Add Reviews – Authenticated users can share their service experiences through text and ratings.",
+      "Secure Authentication – Login and registration handled via Firebase with email and Google sign-in.",
+      "Interactive UI – Animated counters, rating system, and interactive UI using React components and Lottie animations.",
+      "My Services & Reviews – Manage your added services and see only your own reviews with CRUD functionality."
+    ],
+    "techStack": [
+      "React",
+      "React Router v7",
+      "Tailwind CSS v4",
+      "DaisyUI",
+      "Firebase Authentication",
+      "Firebase Hosting",
+      "MongoDB",
+      "Axios",
+      "Lottie React",
+      "React Rating",
+      "React CountUp",
+      "React Icons",
+      "SweetAlert2"
+    ],
+    "clientSite": "https://github.com/MozahidHridoy24/Rate-Deck-Client",
+    "serverSite": "https://github.com/MozahidHridoy24/Rate-Deck-Server",
+    "image": [
+      "https://i.ibb.co/FqDZcBNq/Screenshot-2025-06-29-042211.png",
+      "https://i.ibb.co/JWMwzpvs/Screenshot-2025-06-29-042239.png",
+      "https://i.ibb.co/DDbJ4cqX/Screenshot-2025-06-29-042400.png"
+    ],
+    "challenges": [
+      "Implementing authentication with Google and Firebase Email/Password securely.",
+      "Designing a consistent, interactive review submission and filtering experience.",
+      "Handling user-specific CRUD functionality for services and reviews."
+    ],
+    "futurePlans": [
+      "Add pagination and infinite scroll to service listings.",
+      "Implement service category filtering and searching.",
+      "Add a dashboard analytics section for service owners."
+    ]
+  },
+  {
     "id": "recipe-book",
     "title": "🍽️ Recipe Book",
     "shortDescription": "Your go-to platform to explore, share, and manage recipes from around the world!",
@@ -75,7 +120,10 @@
     ],
     "clientSite": "https://github.com/MozahidHridoy24/Career-Track",
     "serverSite": null,
-    "image": ["https://i.ibb.co/JFcDq9PY/Screenshot-2025-06-29-015227.png"],
+    "image": [
+      "https://i.ibb.co/JFcDq9PY/Screenshot-2025-06-29-015227.png",
+      "https://i.ibb.co/7JnSBXDK/Screenshot-2025-06-29-041207.png"
+    ],
     "purpose": "The goal of CareerTrack is to simplify the job search process for professionals while giving employers a streamlined way to post openings and connect with talent. The platform supports user registration, job listings, company showcases, and more — all built with a modern frontend stack.",
     "challenges": [
       "Integrating secure Firebase Authentication with Email and Google",
