@@ -5,34 +5,42 @@ import {
   FaTwitter,
   FaFacebook,
   FaInstagram,
+  FaWhatsapp,
+  FaEnvelope,
 } from "react-icons/fa";
 import { motion } from "motion/react";
 
 const socialLinks = [
   {
     icon: <FaGithub />,
-    url: "https://github.com/yourusername",
+    url: "https://github.com/MozahidHridoy24",
     label: "GitHub",
   },
   {
     icon: <FaLinkedin />,
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/mozahidul-islam-hridoy-118576228/",
     label: "LinkedIn",
   },
-  {
-    icon: <FaTwitter />,
-    url: "https://twitter.com/yourusername",
-    label: "Twitter",
-  },
+
   {
     icon: <FaFacebook />,
-    url: "https://facebook.com/yourusername",
+    url: "https://facebook.com/mujahidulislam.hridoy",
     label: "Facebook",
   },
   {
     icon: <FaInstagram />,
-    url: "https://instagram.com/yourusername",
+    url: "https://www.instagram.com/mozahid_hridoy?igsh=MWNucW5pNXh6M2FoZA==",
     label: "Instagram",
+  },
+  {
+    icon: <FaWhatsapp />,
+    url: "https://wa.me/8801521217816",
+    label: "WhatsApp",
+  },
+  {
+    icon: <FaEnvelope />,
+    url: "mailto:hridoy1407@gmail.com",
+    label: "Gmail",
   },
 ];
 

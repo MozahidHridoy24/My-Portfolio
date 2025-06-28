@@ -1,10 +1,23 @@
 import { NavLink } from "react-router";
 import { FiMenu } from "react-icons/fi";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null); // ✅ Used to detect outside click
+
+  // ✅ Detect clicks outside the dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const navItems = (
     <>
@@ -32,7 +45,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100 px-6 sticky top-0 left-0 right-0 z-50 shadow-md  border-b">
+    <div className="navbar bg-base-100 px-6 sticky top-0 left-0 right-0 z-50 shadow-md border-b">
+      {/* Brand/Logo */}
       <div className="flex-1">
         <NavLink
           to="/"
@@ -61,24 +75,29 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Dropdown */}
-      <div className="md:hidden">
-        <div className="dropdown dropdown-end">
-          <button
-            tabIndex={0}
-            className="btn btn-ghost"
-            onClick={() => setIsOpen(!isOpen)}
+      <div className={`relative md:hidden`} ref={dropdownRef}>
+        {/* Toggle */}
+        <label
+          tabIndex={0}
+          className="btn btn-ghost p-2"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <FiMenu className="text-2xl" />
+        </label>
+
+        {/* Animated Dropdown Menu */}
+
+        {isOpen && (
+          <motion.ul
+            initial={{ opacity: 0, y: -10, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+            className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-black text-white rounded-box w-52 text-right origin-top-right"
           >
-            <FiMenu className="text-2xl" />
-          </button>
-          {isOpen && (
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-52"
-            >
-              {navItems}
-            </ul>
-          )}
-        </div>
+            {navItems}
+          </motion.ul>
+        )}
       </div>
     </div>
   );

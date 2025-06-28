@@ -8,7 +8,7 @@ import {
 
 const About = () => {
   return (
-    <section className="relative overflow-hidden bg-base-100 py-20 px-6 md:px-20">
+    <section className="relative overflow-hidden bg-base-100 py-12 px-6 md:px-20 w-11/12 mx-auto">
       {/* Background Element (optional decoration) */}
       <div className="absolute inset-0 opacity-10 -z-10 bg-[radial-gradient(circle_at_20%_20%,#219EBC_0%,transparent_30%)] dark:bg-[radial-gradient(circle_at_80%_80%,#219EBC_0%,transparent_30%)]"></div>
 
