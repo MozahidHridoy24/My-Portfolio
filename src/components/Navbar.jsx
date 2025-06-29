@@ -54,7 +54,7 @@ const Navbar = () => {
         >
           Mozah
           <motion.span
-            className="text-[#FFB703] drop-shadow-sm"
+            className="text-orange-500 drop-shadow-sm"
             initial={{ y: -3 }}
             animate={{ y: [-3, 0, -3] }}
             transition={{

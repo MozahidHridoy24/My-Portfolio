@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../components/Banner";
 import About from "./About";
 import Skills from "../components/Skills";
@@ -6,6 +6,9 @@ import Contact from "./Contact";
 import Projects from "./Projects";
 
 const Home = () => {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <Banner></Banner>

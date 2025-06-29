@@ -10,7 +10,7 @@ const Banner = () => {
           Hi, I'm <span className="text-[#219EBC]">Mozahidul Islam Hridoy</span>
         </h1>
         <h2 className="text-xl md:text-2xl text-slate-300 mb-6">
-          MERN Stack Web Developer
+          Full Stack Web Developer
         </h2>
         <p className="text-base md:text-lg mb-6 max-w-xl text-slate-300">
           Passionate about delivering clean, efficient, and impactful web
@@ -50,7 +50,7 @@ const Banner = () => {
             <FaLinkedin />
           </a>
           <a
-            href="https://facebook.com/yourusername"
+            href="https://www.facebook.com/mujahidulislam.hridoy"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Facebook"
@@ -64,7 +64,7 @@ const Banner = () => {
       {/* Right Image */}
       <div className="flex-1 mb-8 lg:mb-0 flex justify-center">
         <img
-          src={myImage} // replace with your photo
+          src={myImage}
           alt="Mozahid"
           className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-xl border-6 border-[#219EBC]"
         />
