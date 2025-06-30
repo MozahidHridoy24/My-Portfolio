@@ -3,6 +3,8 @@ import { FiMenu, FiPhoneCall } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-scroll";
+import logo from "../assets/logo2.png";
+import "../App.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,6 +31,8 @@ const Navbar = () => {
           duration={500}
           offset={-80}
           className="cursor-pointer"
+          activeClass="active-link"
+          spy={true}
         >
           Home
         </Link>
@@ -40,6 +44,8 @@ const Navbar = () => {
           duration={500}
           offset={-80}
           className="cursor-pointer"
+          activeClass="active-link"
+          spy={true}
         >
           About
         </Link>
@@ -51,19 +57,10 @@ const Navbar = () => {
           duration={500}
           offset={-80}
           className="cursor-pointer"
+          activeClass="active-link"
+          spy={true}
         >
           Projects
-        </Link>
-      </li>
-      <li>
-        <Link
-          to="skills"
-          smooth
-          duration={500}
-          offset={-80}
-          className="cursor-pointer"
-        >
-          Skills
         </Link>
       </li>
     </>
@@ -73,11 +70,15 @@ const Navbar = () => {
     <div className="navbar bg-black text-white px-6 sticky top-0 z-50 shadow-md border-b">
       {/* Logo */}
       <div className="flex-1 md:flex-none">
-        <NavLink
-          to="/"
-          className="text-3xl md:text-4xl font-extrabold tracking-tight flex gap-0 bg-gradient-to-r from-[#055780] via-[#219EBC] to-[#8ECAE6] bg-clip-text text-transparent"
+        <Link
+          to="banner"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer text-3xl md:text-4xl font-extrabold tracking-tight flex gap-0 bg-gradient-to-r from-[#055780] via-[#219EBC] to-[#8ECAE6] bg-clip-text text-transparent"
         >
-          Mozah
+          <img className="w-16 h-12" src={logo} alt="" />
+          {/* Mozah
           <motion.span
             className="text-orange-500 drop-shadow-sm"
             initial={{ y: -3 }}
@@ -90,8 +91,8 @@ const Navbar = () => {
           >
             i
           </motion.span>
-          d
-        </NavLink>
+          d */}
+        </Link>
       </div>
 
       {/* Center Nav Links (md and above) */}

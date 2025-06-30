@@ -3,6 +3,7 @@ import myImage from "../assets/mozahid.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import { FiDownload } from "react-icons/fi";
 import { motion } from "motion/react";
+import resume from "../assets/MD.-MOZAHIDUL-ISLAM-Resume.pdf";
 
 const Banner = () => {
   return (
@@ -35,7 +36,7 @@ const Banner = () => {
         {/* Resume Button */}
         <div className="mb-6">
           <motion.a
-            href="../assets/MD.-MOZAHIDUL-ISLAM-Resume.pdf"
+            href={resume}
             download
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
