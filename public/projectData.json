@@ -20,7 +20,6 @@
       "Firebase Hosting",
       "MongoDB",
       "Axios",
-      "Lottie React",
       "React Rating",
       "React CountUp",
       "React Icons",
@@ -30,8 +29,7 @@
     "serverSite": "https://github.com/MozahidHridoy24/Rate-Deck-Server",
     "image": [
       "https://i.ibb.co/FqDZcBNq/Screenshot-2025-06-29-042211.png",
-      "https://i.ibb.co/JWMwzpvs/Screenshot-2025-06-29-042239.png",
-      "https://i.ibb.co/DDbJ4cqX/Screenshot-2025-06-29-042400.png"
+      "https://i.ibb.co/JWMwzpvs/Screenshot-2025-06-29-042239.png"
     ],
     "challenges": [
       "Implementing authentication with Google and Firebase Email/Password securely.",

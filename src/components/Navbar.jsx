@@ -1,53 +1,78 @@
 import { NavLink } from "react-router";
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiPhoneCall } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef(null); // ✅ Used to detect outside click
+  const dropdownRef = useRef(null);
 
-  // ✅ Detect clicks outside the dropdown
+  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const navItems = (
+  // Nav Links
+  const navLinks = (
     <>
       <li>
-        <NavLink to="/" className="hover:text-primary">
+        <Link
+          to="banner"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+        >
           Home
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to="/projects" className="hover:text-primary">
-          Projects
-        </NavLink>
-      </li>
-      <li>
-        <NavLink to="/about" className="hover:text-primary">
+        <Link
+          to="about"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+        >
           About
-        </NavLink>
+        </Link>
       </li>
       <li>
-        <NavLink to="/contact" className="hover:text-primary">
-          Contact
-        </NavLink>
+        <Link
+          to="projects"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+        >
+          Projects
+        </Link>
+      </li>
+      <li>
+        <Link
+          to="skills"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+        >
+          Skills
+        </Link>
       </li>
     </>
   );
 
   return (
-    <div className="navbar bg-[#0f172a] px-6 sticky top-0 left-0 right-0 z-50 shadow-md border-b">
-      {/* Brand/Logo */}
-      <div className="flex-1">
+    <div className="navbar bg-black text-white px-6 sticky top-0 z-50 shadow-md border-b">
+      {/* Logo */}
+      <div className="flex-1 md:flex-none">
         <NavLink
           to="/"
           className="text-3xl md:text-4xl font-extrabold tracking-tight flex gap-0 bg-gradient-to-r from-[#055780] via-[#219EBC] to-[#8ECAE6] bg-clip-text text-transparent"
@@ -69,14 +94,43 @@ const Navbar = () => {
         </NavLink>
       </div>
 
-      {/* Desktop Menu */}
-      <div className="hidden md:flex">
-        <ul className="menu menu-horizontal gap-4 text-base">{navItems}</ul>
+      {/* Center Nav Links (md and above) */}
+      <div className="hidden md:flex flex-1 justify-center">
+        <ul className="menu menu-horizontal gap-6 text-base">{navLinks}</ul>
+      </div>
+      {/* Right Contact Button (md and above) */}
+      <div className="hidden md:flex justify-end">
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <Link
+            to="contact"
+            smooth
+            duration={500}
+            offset={-80}
+            className="btn btn-outline border-[#219EBC] text-white hover:bg-[#219EBC] hover:text-black transition flex items-center gap-2"
+          >
+            <motion.span
+              animate={{ rotate: [0, 15, -15, 0] }}
+              transition={{
+                repeat: Infinity,
+                repeatDelay: 2,
+                duration: 0.6,
+                ease: "easeInOut",
+              }}
+              className="text-lg"
+            >
+              <FiPhoneCall />
+            </motion.span>
+            Contact Now
+          </Link>
+        </motion.div>
       </div>
 
       {/* Mobile Dropdown */}
-      <div className={`relative md:hidden`} ref={dropdownRef}>
-        {/* Toggle */}
+      <div className="md:hidden relative" ref={dropdownRef}>
         <label
           tabIndex={0}
           className="btn btn-ghost p-2"
@@ -84,8 +138,6 @@ const Navbar = () => {
         >
           <FiMenu className="text-2xl" />
         </label>
-
-        {/* Animated Dropdown Menu */}
 
         {isOpen && (
           <motion.ul
@@ -95,7 +147,18 @@ const Navbar = () => {
             transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
             className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-[#0f172a] text-white rounded-box w-52 text-right origin-top-right"
           >
-            {navItems}
+            {navLinks}
+            <li className="mt-2">
+              <Link
+                to="contact"
+                smooth
+                duration={500}
+                offset={-80}
+                className="cursor-pointer font-semibold hover:text-[#219EBC] transition"
+              >
+                Contact Now
+              </Link>
+            </li>
           </motion.ul>
         )}
       </div>

@@ -13,7 +13,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="px-6 lg:px-20 py-12 bg-base-200 ">
+    <section className="px-6  py-8 ">
       <div className="w-11/12 mx-auto">
         <h1 className="text-4xl font-bold mb-8 text-center text-[#219EBC]">
           Projects

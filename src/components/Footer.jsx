@@ -63,7 +63,7 @@ const Footer = () => {
   const formattedTime = dateTime.toLocaleTimeString();
 
   return (
-    <footer className="bg-[#0f172a] text-slate-300 py-8">
+    <footer className="border-t border-white text-slate-300 py-8">
       <div className="max-w-5xl mx-auto px-6 flex flex-col items-center gap-4">
         {/* Social Icons */}
         <div className="flex gap-8 mb-4">
