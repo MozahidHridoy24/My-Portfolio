@@ -18,7 +18,7 @@ const socialLinks = [
   },
   {
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/mozahidul-islam-hridoy-118576228/",
+    url: "https://www.linkedin.com/in/mozahidul-islam-hridoy/",
     label: "LinkedIn",
   },
 

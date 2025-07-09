@@ -105,9 +105,18 @@ const Skills = () => {
   return (
     <section className="py-12 flex items-center justify-center w-11/12 mx-auto overflow-hidden">
       <div className="w-full">
-        <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-12">
+        <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-4">
           My Skills
         </h2>
+        <p className="text-center max-w-3xl mx-auto text-gray-300 mb-12">
+          I specialize in building full-stack web applications using modern
+          technologies. My expertise spans frontend development with React and
+          Tailwind CSS, to robust backend systems using Node.js, Express.js and
+          MongoDB. I also work with powerful tools like Firebase, Vercel, and
+          GitHub for hosting, authentication, and deployment. I’m always
+          exploring new technologies to improve performance, user experience,
+          and scalability.
+        </p>
 
         <div className="relative w-full h-[200px] overflow-hidden">
           <motion.div

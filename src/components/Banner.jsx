@@ -3,7 +3,7 @@ import myImage from "../assets/mozahid.jpg";
 import { Typewriter } from "react-simple-typewriter";
 import { FiDownload } from "react-icons/fi";
 import { motion } from "motion/react";
-import resume from "../assets/MD.-MOZAHIDUL-ISLAM-Resume.pdf";
+import resume from "../assets/Resume-of-Mozahidul-Islam.pdf";
 
 const Banner = () => {
   return (
@@ -70,7 +70,7 @@ const Banner = () => {
             <FaGithub />
           </a>
           <a
-            href="https://www.linkedin.com/in/mozahidul-islam-hridoy-118576228/"
+            href="https://www.linkedin.com/in/mozahidul-islam-hridoy/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

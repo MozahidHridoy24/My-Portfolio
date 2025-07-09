@@ -63,6 +63,19 @@ const Navbar = () => {
           Projects
         </Link>
       </li>
+      <li>
+        <Link
+          to="skills"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+          activeClass="active-link"
+          spy={true}
+        >
+          Skills
+        </Link>
+      </li>
     </>
   );
 
