@@ -9,6 +9,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { motion } from "motion/react";
+import { SiLeetcode } from "react-icons/si";
 
 const socialLinks = [
   {
@@ -41,6 +42,11 @@ const socialLinks = [
     icon: <FaEnvelope />,
     url: "mailto:hridoy1407@gmail.com",
     label: "Gmail",
+  },
+  {
+    icon: <SiLeetcode />,
+    url: "https://leetcode.com/u/MozahidHridoy/",
+    label: "LeetCode",
   },
 ];
 
