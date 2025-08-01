@@ -3,6 +3,7 @@ import About from "./About";
 import Skills from "../components/Skills";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import GitHubContributions from "../components/GithubContributions";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <section id="contact">
         <Contact />
       </section>
+      <GitHubContributions/>
     </div>
   );
 };
