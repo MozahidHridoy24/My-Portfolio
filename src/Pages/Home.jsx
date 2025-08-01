@@ -4,6 +4,7 @@ import Skills from "../components/Skills";
 import Contact from "./Contact";
 import Projects from "./Projects";
 import GitHubContributions from "../components/GithubContributions";
+import Education from "./Education";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
       <section id="about">
         <About />
       </section>
+      <section id="education">
+        <Education></Education>
+      </section>
       <section id="projects">
         <Projects />
       </section>
@@ -23,7 +27,7 @@ const Home = () => {
       <section id="contact">
         <Contact />
       </section>
-      <GitHubContributions/>
+      <GitHubContributions />
     </div>
   );
 };

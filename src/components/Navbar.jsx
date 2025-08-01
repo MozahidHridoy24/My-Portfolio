@@ -52,6 +52,19 @@ const Navbar = () => {
       </li>
       <li>
         <Link
+          to="education"
+          smooth
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+          activeClass="active-link"
+          spy={true}
+        >
+          Education
+        </Link>
+      </li>
+      <li>
+        <Link
           to="projects"
           smooth
           duration={500}

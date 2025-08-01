@@ -28,7 +28,7 @@ const ContactItem = ({ item, idx }) => {
   // useInView hook to detect visibility
   const [ref, inView] = useInView({
     triggerOnce: true, // animate only once
-    threshold: 0.2,    // 20% visible triggers animation
+    threshold: 0.2, // 20% visible triggers animation
   });
 
   // Define initial transform based on index

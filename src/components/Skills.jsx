@@ -103,7 +103,7 @@ const Skills = () => {
   ];
 
   return (
-    <section className="py-12 flex items-center justify-center w-11/12 mx-auto overflow-hidden">
+    <section className="py-2 flex items-center justify-center w-11/12 mx-auto overflow-hidden mb-4">
       <div className="w-full">
         <h2 className="text-4xl font-bold text-center text-[#219EBC] mb-4">
           My Skills

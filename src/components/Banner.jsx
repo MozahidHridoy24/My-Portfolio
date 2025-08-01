@@ -31,7 +31,7 @@ const Banner = () => {
         </h2>
         <p className="text-base md:text-lg mb-6 max-w-xl text-slate-300">
           Passionate about delivering clean, efficient, and impactful web
-          applications using modern technologies like React, Node.js,
+          applications using modern technologies like React.js, Next.js, Node.js,
           Express.js, MongoDB and Tailwind CSS.
         </p>
 
