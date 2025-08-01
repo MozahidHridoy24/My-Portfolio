@@ -20,7 +20,11 @@ const Banner = () => {
         </h1>
         <h2 className="text-xl md:text-2xl text-amber-400 mb-6">
           <Typewriter
-            words={["Full Stack Web Developer", "JavaScript Enthusiast"]}
+            words={[
+              "Full Stack Web Developer",
+              "JavaScript Enthusiast",
+              "Computer Science Engineer",
+            ]}
             loop={true}
             cursor
             cursorStyle="|"
@@ -31,8 +35,8 @@ const Banner = () => {
         </h2>
         <p className="text-base md:text-lg mb-6 max-w-xl text-slate-300">
           Passionate about delivering clean, efficient, and impactful web
-          applications using modern technologies like React.js, Next.js, Node.js,
-          Express.js, MongoDB and Tailwind CSS.
+          applications using modern technologies like React.js, Next.js,
+          Node.js, Express.js, MongoDB and Tailwind CSS.
         </p>
 
         {/* Social Links */}

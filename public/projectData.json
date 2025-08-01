@@ -43,6 +43,61 @@
     ]
   },
   {
+    "id": "find-my-mate",
+    "title": "💑 Find My Mate",
+    "shortDescription": "A secure and feature-rich matrimonial platform for finding your ideal life partner with role-based dashboards and premium features.",
+    "liveLink": "https://find-my-mate-24.web.app/",
+    "features": [
+      "Elegant and responsive UI/UX for all screen sizes using Tailwind CSS and shadcn/ui.",
+      "Role-based dashboards for Admin, Normal, and Premium users.",
+      "Firebase Authentication with Email/Password and Google Sign-In.",
+      "Create, edit, and view detailed biodata with partner preferences.",
+      "Stripe integration for secure premium membership upgrades.",
+      "Admin approval system for contact requests.",
+      "Favorite system to bookmark biodatas.",
+      "Biodata filtering by age, gender, and division.",
+      "‘Got Married’ success story form with image and review.",
+      "Framer Motion animations and responsive modals for smooth interactions.",
+      "Protected routes with private authentication logic."
+    ],
+    "techStack": [
+      "React 18",
+      "Vite",
+      "Tailwind CSS v4",
+      "React Router v7.6",
+      "shadcn/ui",
+      "Framer Motion",
+      "SweetAlert2",
+      "React Icons",
+      "React CountUp",
+      "TanStack Query",
+      "Axios",
+      "Firebase Auth",
+      "Node.js",
+      "Express.js",
+      "MongoDB (native driver)",
+      "Stripe"
+    ],
+    "clientSite": "https://github.com/MozahidHridoy24/Find-My-Mate-Client",
+    "serverSite": "https://github.com/MozahidHridoy24/Find-My-Mate-Server",
+    "image": [
+      "https://i.ibb.co/PZMwBthw/fmm1.png",
+      "https://i.ibb.co/MD8YGJY2/fmm2.png",
+      "https://i.ibb.co/bMbyzGsH/fmm3.png"
+    ],
+    "challenges": [
+      "Implementing secure role-based dashboards for different user types.",
+      "Creating a flexible biodata form with nested fields and dynamic partner preferences.",
+      "Managing contact requests, favorites, and admin approval flows.",
+      "Integrating Stripe and handling real-time subscription status updates."
+    ],
+    "futurePlans": [
+      "Add real-time chat between matched users.",
+      "Implement biodata suggestions using match percentage logic.",
+      "Allow users to hide or archive old biodatas."
+    ]
+  },
+  {
     "id": "recipe-book",
     "title": "🍽️ Recipe Book",
     "shortDescription": "Your go-to platform to explore, share, and manage recipes from around the world!",

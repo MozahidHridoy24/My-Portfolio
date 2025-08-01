@@ -50,7 +50,7 @@ const cards = [
 
 const About = () => {
   return (
-    <section className="py-2 px-4">
+    <section className="py-2 px-4 w-11/12 mx-auto">
       {/* Decorative Background */}
       <div className="absolute inset-0 -z-10 opacity-10 bg-[radial-gradient(circle_at_80%_80%,#219EBC_0%,transparent_50%)]" />
 
