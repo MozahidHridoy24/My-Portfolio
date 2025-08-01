@@ -76,30 +76,30 @@ const Banner = () => {
           </a>
         </div>
 
-        {/* Resume Button */}
-        <div className="mb-6 flex gap-6 flex-wrap">
-          {/* Download Resume Button */}
-          <motion.a
-            href={resume}
-            download
+        {/* Resume & Contact Button */}
+        <div className="mb-6 flex gap-6 flex-wrap justify-center md:justify-start">
+          {/* Resume Button */}
+          <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className="flex items-center gap-2 px-5 py-2 rounded-md bg-[#219EBC] text-white font-semibold hover:bg-[#1a8aa6] shadow-md hover:shadow-lg transition"
           >
-            <motion.span
-              animate={{ y: [0, -2, 0] }}
-              transition={{
-                repeat: Infinity,
-                repeatDelay: 2,
-                duration: 0.6,
-                ease: "easeInOut",
-              }}
+            <a
+              href={resume}
+              download
+              className="flex items-center gap-2 px-5 py-2 rounded-md bg-[#219EBC] text-white font-semibold shadow-md hover:bg-[#1a8aa6] transition-colors duration-300 cursor-pointer"
             >
-              <FiDownload className="text-lg" />
-            </motion.span>
-            Resume
-          </motion.a>
+              <motion.span
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 1 }}
+              >
+                <FiDownload className="text-lg" />
+              </motion.span>
+              Resume
+            </a>
+          </motion.div>
 
           {/* Contact Now Button */}
           <motion.div
@@ -107,14 +107,14 @@ const Banner = () => {
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", stiffness: 200 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <Link
               to="contact"
               smooth={true}
               duration={500}
               offset={-80}
-              className="group flex items-center gap-2 px-5 py-2 rounded-md border border-[#219EBC] text-white font-semibold shadow-md hover:bg-[#219EBC] transition-colors duration-300 cursor-pointer"
+              className="flex items-center gap-2 px-5 py-2 rounded-md bg-[#219EBC] text-white font-semibold shadow-md hover:bg-[#1a8aa6] transition-colors duration-300 cursor-pointer"
             >
               <motion.span
                 animate={{ y: [0, -3, 0] }}
