@@ -1,9 +1,11 @@
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import myImage from "../assets/mozahid.jpg";
 import { Typewriter } from "react-simple-typewriter";
-import { FiDownload } from "react-icons/fi";
+import { FiDownload, FiPhoneCall } from "react-icons/fi";
 import { motion } from "motion/react";
 import resume from "../assets/Resume-of-Mozahidul-Islam.pdf";
+import { Link } from "react-router";
+import { SiLeetcode } from "react-icons/si";
 
 const Banner = () => {
   return (
@@ -33,33 +35,8 @@ const Banner = () => {
           Express.js, MongoDB and Tailwind CSS.
         </p>
 
-        {/* Resume Button */}
-        <div className="mb-6">
-          <motion.a
-            href={resume}
-            download
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className="btn  bg-[#219EBC] text-white hover:bg-[#1a8aa6] transition shadow-md hover:shadow-lg"
-          >
-            <motion.span
-              animate={{ y: [0, -2, 0] }}
-              transition={{
-                repeat: Infinity,
-                repeatDelay: 2,
-                duration: 0.6,
-                ease: "easeInOut",
-              }}
-            >
-              <FiDownload className="text-lg" />
-            </motion.span>
-            Resume
-          </motion.a>
-        </div>
-
         {/* Social Links */}
-        <div className="flex gap-4 justify-center md:justify-start text-2xl">
+        <div className="flex gap-4 justify-center md:justify-start text-2xl mb-6">
           <a
             href="https://github.com/MozahidHridoy24"
             target="_blank"
@@ -78,6 +55,16 @@ const Banner = () => {
           >
             <FaLinkedin />
           </a>
+          {/* LeetCode */}
+          <a
+            href="https://leetcode.com/u/MozahidHridoy/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LeetCode"
+            className="transform transition duration-300 hover:scale-125 hover:text-[#FFA116]"
+          >
+            <SiLeetcode className="text-xl" />
+          </a>
           <a
             href="https://www.facebook.com/mujahidulislam.hridoy"
             target="_blank"
@@ -87,6 +74,57 @@ const Banner = () => {
           >
             <FaFacebook />
           </a>
+        </div>
+
+        {/* Resume Button */}
+        <div className="mb-6 flex gap-6 flex-wrap">
+          {/* Download Resume Button */}
+          <motion.a
+            href={resume}
+            download
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            className="flex items-center gap-2 px-5 py-2 rounded-md bg-[#219EBC] text-white font-semibold hover:bg-[#1a8aa6] shadow-md hover:shadow-lg transition"
+          >
+            <motion.span
+              animate={{ y: [0, -2, 0] }}
+              transition={{
+                repeat: Infinity,
+                repeatDelay: 2,
+                duration: 0.6,
+                ease: "easeInOut",
+              }}
+            >
+              <FiDownload className="text-lg" />
+            </motion.span>
+            Resume
+          </motion.a>
+
+          {/* Contact Now Button */}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", stiffness: 200 }}
+          >
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-80}
+              className="group flex items-center gap-2 px-5 py-2 rounded-md border border-[#219EBC] text-white font-semibold shadow-md hover:bg-[#219EBC] transition-colors duration-300 cursor-pointer"
+            >
+              <motion.span
+                animate={{ y: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 1 }}
+              >
+                <FiPhoneCall className="text-xl" />
+              </motion.span>
+              Contact Now
+            </Link>
+          </motion.div>
         </div>
       </div>
 
