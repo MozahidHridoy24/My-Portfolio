@@ -93,7 +93,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-black text-white px-6 sticky top-0 z-50 shadow-md border-b">
+    <div className="navbar md:w-11/12 lg:w-9/12 mx-auto bg-black text-white px-6 sticky top-0 md:top-4 z-50 shadow-md border-b md:border md:border-cyan-700 md:rounded-full">
       {/* Logo */}
       <div className="flex-1 md:flex-none">
         <Link
@@ -123,7 +123,9 @@ const Navbar = () => {
 
       {/* Center Nav Links (md and above) */}
       <div className="hidden md:flex flex-1 justify-center">
-        <ul className="menu menu-horizontal gap-6 text-base">{navLinks}</ul>
+        <ul className="menu menu-horizontal gap-4 lg:gap-6 text-base">
+          {navLinks}
+        </ul>
       </div>
       {/* Right Contact Button (md and above) */}
       <div className="hidden md:flex justify-end">
@@ -172,7 +174,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-            className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-[#0f172a] text-white rounded-box w-52 text-right translate-x-6 origin-top-right"
+            className="absolute right-0 mt-4 z-[50] menu menu-sm p-4 shadow-lg bg-[#0f172a] text-white rounded-box w-52 text-right translate-x-6 origin-top-right"
           >
             {navLinks}
             <li className="mt-2">

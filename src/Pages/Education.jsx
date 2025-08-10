@@ -41,7 +41,7 @@ const Education = () => {
           <img
             src={universityLogo}
             alt="University Logo"
-            className="w-80 h-80 object-cover"
+            className="w-80 h-80 object-cover rounded-lg"
           />
         </div>
       </div>
