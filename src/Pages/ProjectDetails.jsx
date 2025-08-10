@@ -26,7 +26,7 @@ const ProjectDetails = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="max-w-5xl mx-auto px-4 py-12 text-white"
+      className="max-w-5xl mx-auto px-4 py-12 text-white bg-[#0f172a]/60"
     >
       {/* Back Button */}
       <button
