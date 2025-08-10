@@ -93,7 +93,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-black text-white px-6 sticky top-0 z-50 shadow-md border-b">
+    <div className="navbar bg-black text-white px-6 fixed top-0 z-50 shadow-md border-b">
       {/* Logo */}
       <div className="flex-1 md:flex-none">
         <Link
@@ -172,7 +172,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-            className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-[#0f172a] text-white rounded-box w-52 text-right origin-top-right"
+            className="absolute right-0 mt-3 z-[50] menu menu-sm p-4 shadow-lg bg-[#0f172a] text-white rounded-box w-52 text-right translate-x-6 origin-top-right"
           >
             {navLinks}
             <li className="mt-2">

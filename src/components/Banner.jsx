@@ -9,7 +9,7 @@ import { SiLeetcode } from "react-icons/si";
 
 const Banner = () => {
   return (
-    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 py-10">
+    <section className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 py-28 md:py-36">
       {/* Left content */}
       <div className="flex-1 text-center md:text-left">
         <h1 className="text-xl font-bold mb-4">
