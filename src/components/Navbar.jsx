@@ -93,7 +93,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-black text-white px-6 fixed top-0 z-50 shadow-md border-b">
+    <div className="navbar bg-black text-white px-6 sticky top-0 z-50 shadow-md border-b">
       {/* Logo */}
       <div className="flex-1 md:flex-none">
         <Link

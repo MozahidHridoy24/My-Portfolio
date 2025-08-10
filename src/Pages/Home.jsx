@@ -8,7 +8,7 @@ import Education from "./Education";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <section id="banner">
         <Banner />
       </section>

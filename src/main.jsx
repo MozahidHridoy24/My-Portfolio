@@ -7,7 +7,7 @@ import VantaBackground from "./components/VantaBackground.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <div className="max-w-7xl mx-auto overflow-x-hidden">
+    <div className="max-w-7xl mx-auto">
       <VantaBackground></VantaBackground>
       <RouterProvider router={router} />
     </div>
