@@ -93,7 +93,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar md:w-11/12 lg:w-9/12 mx-auto bg-black text-white px-6 sticky top-0 md:top-4 z-50 shadow-md border-b md:border md:border-cyan-700 md:rounded-full">
+    <div className="navbar md:w-11/12 lg:w-9/12 mx-auto bg-black text-white px-6 sticky top-0 md:top-4 z-50 shadow-md border-b md:border-[2px] md:border-cyan-700 md:rounded-full">
       {/* Logo */}
       <div className="flex-1 md:flex-none">
         <Link
